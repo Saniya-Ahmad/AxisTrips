@@ -1,7 +1,7 @@
 const sampleListings = [
   {
     title: "Cozy Beachfront Cottage",
-    description:
+    desc:
       "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
     image: {
       filename: "listingimage",
@@ -13,7 +13,7 @@ const sampleListings = [
   },
   {
     title: "Modern Loft in Downtown",
-    description:
+    desc:
       "Stay in the heart of the city in this stylish loft apartment. Perfect for urban explorers!",
     image: {
       filename: "listingimage",
@@ -25,7 +25,7 @@ const sampleListings = [
   },
   {
     title: "Mountain Retreat",
-    description:
+    desc:
       "Unplug and unwind in this peaceful mountain cabin. Surrounded by nature, it's a perfect place to recharge.",
     image: {
       filename: "listingimage",
@@ -37,7 +37,7 @@ const sampleListings = [
   },
   {
     title: "Historic Villa in Tuscany",
-    description:
+    desc:
       "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
     image: {
       filename: "listingimage",
@@ -49,7 +49,7 @@ const sampleListings = [
   },
   {
     title: "Secluded Treehouse Getaway",
-    description:
+    desc:
       "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
     image: {
       filename: "listingimage",
@@ -61,7 +61,7 @@ const sampleListings = [
   },
   {
     title: "Beachfront Paradise",
-    description:
+    desc:
       "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
     image: {
       filename: "listingimage",
@@ -73,7 +73,7 @@ const sampleListings = [
   },
   {
     title: "Rustic Cabin by the Lake",
-    description:
+    desc:
       "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
     image: {
       filename: "listingimage",
@@ -85,7 +85,7 @@ const sampleListings = [
   },
   {
     title: "Luxury Penthouse with City Views",
-    description:
+    desc:
       "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
     image: {
       filename: "listingimage",
@@ -97,7 +97,7 @@ const sampleListings = [
   },
   {
     title: "Ski-In/Ski-Out Chalet",
-    description:
+    desc:
       "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
     image: {
       filename: "listingimage",
@@ -109,7 +109,7 @@ const sampleListings = [
   },
   {
     title: "Safari Lodge in the Serengeti",
-    description:
+    desc:
       "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
     image: {
       filename: "listingimage",
@@ -121,7 +121,7 @@ const sampleListings = [
   },
   {
     title: "Historic Canal House",
-    description:
+    desc:
       "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
     image: {
       filename: "listingimage",
@@ -133,7 +133,7 @@ const sampleListings = [
   },
   {
     title: "Private Island Retreat",
-    description:
+    desc:
       "Have an entire island to yourself for a truly exclusive and unforgettable vacation experience.",
     image: {
       filename: "listingimage",
@@ -145,7 +145,7 @@ const sampleListings = [
   },
   {
     title: "Charming Cottage in the Cotswolds",
-    description:
+    desc:
       "Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.",
     image: {
       filename: "listingimage",
@@ -157,7 +157,7 @@ const sampleListings = [
   },
   {
     title: "Historic Brownstone in Boston",
-    description:
+    desc:
       "Step back in time in this elegant historic brownstone located in the heart of Boston.",
     image: {
       filename: "listingimage",
@@ -169,7 +169,7 @@ const sampleListings = [
   },
   {
     title: "Beachfront Bungalow in Bali",
-    description:
+    desc:
       "Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.",
     image: {
       filename: "listingimage",
@@ -181,7 +181,7 @@ const sampleListings = [
   },
   {
     title: "Mountain View Cabin in Banff",
-    description:
+    desc:
       "Enjoy breathtaking mountain views from this cozy cabin in the Canadian Rockies.",
     image: {
       filename: "listingimage",
@@ -193,7 +193,7 @@ const sampleListings = [
   },
   {
     title: "Art Deco Apartment in Miami",
-    description:
+    desc:
       "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
     image: {
       filename: "listingimage",
@@ -205,7 +205,7 @@ const sampleListings = [
   },
   {
     title: "Tropical Villa in Phuket",
-    description:
+    desc:
       "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",
     image: {
       filename: "listingimage",
@@ -217,7 +217,7 @@ const sampleListings = [
   },
   {
     title: "Historic Castle in Scotland",
-    description:
+    desc:
       "Live like royalty in this historic castle in the Scottish Highlands. Explore the rugged beauty of the area.",
     image: {
       filename: "listingimage",
@@ -229,7 +229,7 @@ const sampleListings = [
   },
   {
     title: "Desert Oasis in Dubai",
-    description:
+    desc:
       "Experience luxury in the middle of the desert in this opulent oasis in Dubai with a private pool.",
     image: {
       filename: "listingimage",
@@ -241,7 +241,7 @@ const sampleListings = [
   },
   {
     title: "Rustic Log Cabin in Montana",
-    description:
+    desc:
       "Unplug and unwind in this cozy log cabin surrounded by the natural beauty of Montana.",
     image: {
       filename: "listingimage",
@@ -253,7 +253,7 @@ const sampleListings = [
   },
   {
     title: "Beachfront Villa in Greece",
-    description:
+    desc:
       "Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.",
     image: {
       filename: "listingimage",
@@ -265,7 +265,7 @@ const sampleListings = [
   },
   {
     title: "Eco-Friendly Treehouse Retreat",
-    description:
+    desc:
       "Stay in an eco-friendly treehouse nestled in the forest. It's the perfect escape for nature lovers.",
     image: {
       filename: "listingimage",
@@ -277,7 +277,7 @@ const sampleListings = [
   },
   {
     title: "Historic Cottage in Charleston",
-    description:
+    desc:
       "Experience the charm of historic Charleston in this beautifully restored cottage with a private garden.",
     image: {
       filename: "listingimage",
@@ -289,7 +289,7 @@ const sampleListings = [
   },
   {
     title: "Modern Apartment in Tokyo",
-    description:
+    desc:
       "Explore the vibrant city of Tokyo from this modern and centrally located apartment.",
     image: {
       filename: "listingimage",
@@ -301,7 +301,7 @@ const sampleListings = [
   },
   {
     title: "Lakefront Cabin in New Hampshire",
-    description:
+    desc:
       "Spend your days by the lake in this cozy cabin in the scenic White Mountains of New Hampshire.",
     image: {
       filename: "listingimage",
@@ -313,7 +313,7 @@ const sampleListings = [
   },
   {
     title: "Luxury Villa in the Maldives",
-    description:
+    desc:
       "Indulge in luxury in this overwater villa in the Maldives with stunning views of the Indian Ocean.",
     image: {
       filename: "listingimage",
@@ -325,7 +325,7 @@ const sampleListings = [
   },
   {
     title: "Ski Chalet in Aspen",
-    description:
+    desc:
       "Hit the slopes in style with this luxurious ski chalet in the world-famous Aspen ski resort.",
     image: {
       filename: "listingimage",
@@ -337,7 +337,7 @@ const sampleListings = [
   },
   {
     title: "Secluded Beach House in Costa Rica",
-    description:
+    desc:
       "Escape to a secluded beach house on the Pacific coast of Costa Rica. Surf, relax, and unwind.",
     image: {
       filename: "listingimage",

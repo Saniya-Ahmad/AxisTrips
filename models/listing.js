@@ -13,6 +13,8 @@ const listingSchema = new mongoose.Schema({
     //     // not available in frontend
     //     : v,
     // },
+
+    desc:String,
     image: {
   filename: String,
   url: {
@@ -22,7 +24,7 @@ const listingSchema = new mongoose.Schema({
 }
 ,
 
-    desc:String,
+
     price:Number,
     location:String,
     country:String,
