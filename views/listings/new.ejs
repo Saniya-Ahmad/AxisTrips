@@ -11,18 +11,19 @@
             <div class="col-8 offset-2">
                  <h3>Create a new Listing</h3>
 
-    <form method="post" action="/listings">
+    <form method="post" action="/listings" noValidate class="needs-validation">
         
         <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input name="listing[title]" placeholder="enter title" type="text" class="form-control"/>
+        <input name="listing[title]" placeholder="enter title" type="text" class="form-control" required/>
+        <div class="valid-feedback"> Title looks good!</div>
         </div>
 
         
 
         <div class="mb-3">
          <label for="desc" class="form-label">Description</label>
-        <textarea name="listing[desc]"  type="text" rows="5" cols="40" class="form-control"></textarea>
+        <textarea name="listing[desc]"  type="text" rows="5" cols="40" class="form-control" required></textarea>
         </div>
        
         
@@ -33,19 +34,21 @@
     
         <div class="mb-3">
              <label for="price" class="form-label">Price</label>
-            <input name="listing[price]" placeholder="enter price" type="text" class="form-control"/>
+            <input name="listing[price]" placeholder="enter price" class="form-control" required/>
+            <div class="invalid-feedback">Please enter numbers only </div>
         </div>
         
       
         <div class="mb-3">
             <label for="country" class="form-label">Country</label>
-            <input name="listing[country]" placeholder="enter country" type="text" class="form-control"/>
+            <input name="listing[country]" placeholder="enter country"  class="form-control" required/>
+            <div class="invalid-feedback">Please enter valid country </div>
         </div>
         
      
         <div class="mb-3">
             <label for="location" class="form-label">Location</label>
-            <input name="listing[location]" placeholder="enter location" type="text" class="form-control"/>
+            <input name="listing[location]" placeholder="enter location" type="text" class="form-control" required/>
         </div>
         
         

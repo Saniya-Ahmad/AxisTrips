@@ -10,7 +10,8 @@
             
             <b><li><%= listing.title%></li></b>
             <li><%= listing.desc%></li>
-            <li> &#8377;<%= listing.price.toLocaleString("en-In")%></li>
+            <li> &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : 'Price not available' %> / night
+</li>
             <li><%= listing.location%></li>
             <li><%= listing.country%></li>
         </p> 
@@ -18,14 +19,7 @@
         </div>
 
         
-                <!-- <ul>
-            <li><%= listing.title%></li>
-            <li><%= listing.desc%></li>
-            
-            <li> &#8377;<%= listing.price.toLocaleString("en-In")%></li>
-            <li><%= listing.location%></li>
-            <li><%= listing.country%></li>
-        </ul> -->
+           
 
 <div class="btns">
  <form method="get" action="/listings/<%=listing._id%>/edit" >
