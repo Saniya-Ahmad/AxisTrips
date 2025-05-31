@@ -49,7 +49,7 @@ text-decoration: underline;
     align-items: space-evenly;
 
 }
-.card{
+.listing-card{
     border: none !important;
     margin-bottom: 2rem;
 }
@@ -75,9 +75,9 @@ opacity: 0;
     opacity: 0.2;
     background-color: white;
 }
-.btn{
+/* .btn{
     background-color: rgb(4, 107, 159) !important;
-}
+} */
 .show-img{
     height: 30vh;
 }
