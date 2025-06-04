@@ -18,11 +18,16 @@ const listingSchema = new mongoose.Schema({
 
     desc:String,
     image: {
-  filename: String,
+      
+      filename:{type: String,},
+  
   url: {
     type: String,
     default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZjYKPjVrCS_uKmuUXIkYNXPA3x0q_Y-hYQ&s"
+    
+ 
   }
+  
 }
 ,
 
@@ -39,7 +44,7 @@ const listingSchema = new mongoose.Schema({
 //middleware
 listingSchema.post("findOneAndDelete", async(listing)=>{
   if(listing){
- await Review.deleteMany({_id : {reviews:{ $in: listing.reviews}}})
+ await Review.deleteMany({_id : { $in: listing.reviews}}) //is line  ne 2.5 din le liye fix krne me 
   }
  
 })

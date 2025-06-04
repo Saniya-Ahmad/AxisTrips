@@ -23,3 +23,11 @@ const initDB = async()=>{
 
 }
 initDB();
+const deldb = async()=>{
+    await Listing.findByIdAndDelete('683def91a974be954a743cbe');
+    
+    console.log("data was deleted");
+
+
+}
+//deldb();
