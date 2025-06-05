@@ -17,12 +17,17 @@ async function main(){
 
 const initDB = async()=>{
     await Listing.deleteMany({});
+    initData.data= initData.data.map((obj)=>({
+        ...obj,
+        owner:"68407cd7615791c1b591dc06"
+    }))
     await Listing.insertMany(initData.data);
     console.log("data was initialized");
 
 
 }
-initDB();
+
+//initDB();
 const deldb = async()=>{
     await Listing.findByIdAndDelete('683def91a974be954a743cbe');
     

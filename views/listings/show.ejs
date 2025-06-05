@@ -8,7 +8,7 @@
             alt="listing_image"/>
             <div class="card-body"><p class="card-text">
             
-           
+           <li>Owned by: <b><i><%= listing.owner.username%></i></b></li>
             <li><%= listing.desc%></li>
             <li> &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : 'Price not available' %> / night
 </li>
@@ -20,7 +20,7 @@
 
         
            
-
+<% if(currUser && currUser._id.equals(listing.owner._id)) {%>
 <div class="btns">
  <form method="get" action="/listings/<%=listing._id%>/edit" >
             <button class="btn btn-dark  offset-2 edit-btn">Edit </button>
@@ -29,8 +29,12 @@
             <button class="btn btn-dark offset-4 del-btn">Delete </button>
         </form>
 </div>
+<% }%>
+
+
 <div class="col-8   mb-3">
     <hr/>
+    <%if(currUser) {%>
     <h4>Leave a Review</h4>
     <form method="post" action="/listings/<%=listing._id%>/reviews" noValidate class="needs-validation">
         <div class="mb-3 mt-3">
@@ -45,8 +49,9 @@
         </div>
         <button class="btn btn-outline-dark">Submit</button>
     </form>
-
+        <%}%>
 </div>
+
 <p><b>All Reviews</b></p>
 
 
@@ -54,7 +59,7 @@
 <% for(review of listing.reviews) {%>
     <div class="card col-5 ms-3 mb-3 ">
         <div class="card-body">
-            <h5 class="card-title">John doe</h5>
+            <h5 class="card-title">@<%=review.author.username%></h5>
             
             <p class="card-text"> <%= review.comment%></p>
             <p class="card-text"><%= review.rating%> &#9733;</p>

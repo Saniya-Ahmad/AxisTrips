@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 let {Schema }= mongoose;
 const Review = require('./review.js');
+const User = require('./user.js');
 const listingSchema = new mongoose.Schema({
     title:{
         type:String,
@@ -38,7 +39,11 @@ const listingSchema = new mongoose.Schema({
     reviews:[{
       type:Schema.Types.ObjectId,
       ref : "Review"
-    }]
+    }],
+    owner:{
+      type:Schema.Types.ObjectId,
+      ref:'User'
+    }
 
 })
 //middleware

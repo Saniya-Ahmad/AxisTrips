@@ -41,7 +41,7 @@ router.post('/login',
     passport.authenticate("local",{failureRedirect:'/login',failureFlash:true}), 
     async (req,res)=>{
     req.flash("success",'Welcome to AxisTrips, You are logged in successfully!');
-    let redirectUrl= express.locals.redirectUrl || '/listings'  // so that home page pr error naa aaye
+    let redirectUrl= res.locals.redirectUrl || '/listings'  // so that home page pr error naa aaye
     res.redirect(redirectUrl);
     //res.redirect('/listings');  //we want jis address pr jaane ke baad lpin page aaya if we login then fir usi page pr jaaye jese 
     //                      edit pr loggin req and when we login then we go to /listings/id/edit page only for this check middleware.js
