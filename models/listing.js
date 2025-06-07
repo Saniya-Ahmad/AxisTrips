@@ -20,14 +20,13 @@ const listingSchema = new mongoose.Schema({
     desc:String,
     image: {
       
-      filename:{type: String,},
+      filename: String,
   
-  url: {
-    type: String,
-    default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZjYKPjVrCS_uKmuUXIkYNXPA3x0q_Y-hYQ&s"
+  url: String,
+    //default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZjYKPjVrCS_uKmuUXIkYNXPA3x0q_Y-hYQ&s"
     
  
-  }
+
   
 }
 ,
