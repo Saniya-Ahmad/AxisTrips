@@ -55,7 +55,12 @@ router.get('/:id',isLoggedIn, wrapAsync(listingController.showListing));
 //edit route
 router.get('/:id/edit',isLoggedIn,isOwner,wrapAsync(listingController.editListing));
 //update route
-router.put('/:id',isLoggedIn,isOwner,wrapAsync(listingController.updateListing));
+router.put('/:id',
+  isLoggedIn,
+  isOwner,
+  upload.single("listing[image][url]"),
+  validateListing,
+  wrapAsync(listingController.updateListing));
 //delete route
 router.delete('/:id',isLoggedIn,isOwner, wrapAsync(listingController.deleteListing));
 module.exports= router;
