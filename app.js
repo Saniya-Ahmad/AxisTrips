@@ -8,7 +8,8 @@ const express = require("express");
 const app= express();
 const mongoose = require("mongoose");
 const Listing= require('./models/listing.js');
-const MONGO_URL= "mongodb://127.0.0.1:27017/axistrips";
+// const MONGO_URL= "mongodb://127.0.0.1:27017/axistrips";
+const dbUrl= process.env.ATLASDB_URL;
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 const ejsMate = require('ejs-mate');
@@ -19,6 +20,7 @@ const Review= require('./models/review.js');
 const listings = require('./routes/listing.js');
 const reviews = require('./routes/review.js');
 const session = require('express-session');
+const MongoStore = require('connect-mongo');
 const flash= require('connect-flash');
 const passport= require('passport');
 const LocalStrategy= require('passport-local')
@@ -38,10 +40,23 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, '/public')));
+
 async function main(){
-    await mongoose.connect(MONGO_URL);
+    await mongoose.connect(dbUrl);
 }
+
+const store=MongoStore.create({
+    mongoUrl:dbUrl,
+    crypto:{
+        secret:'mysupersecretcode'
+    },
+    touchAfter:24*60*60,
+})
+store.on('error',()=>{
+    console.log('Error in Mongo Session Store',err)
+})
 const sessionOptions={
+    store,
     secret:'mysupersecretcode',
     resave:false,
     saveUninitialized:true,
@@ -52,6 +67,7 @@ const sessionOptions={
     }
 
 }
+
 app.use(session(sessionOptions))
 app.use(flash())
 app.use(passport.initialize());
