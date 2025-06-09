@@ -39,16 +39,29 @@ text-decoration: underline;
     font-size: 1.2rem;
     margin-right: 1rem;
 }
-.f-info{
+/* .f-info {
     text-align: center;
     height: 8rem;
     background-color: rgb(211, 211, 211);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-evenly;
-
+    align-items: center; 
+} */
+.f-info {
+    height: 8rem;
+    background-color: rgb(211, 211, 211);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
+
+
+
+
 .listing-card{
     border: none !important;
     margin-bottom: 2rem;
