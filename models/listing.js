@@ -46,11 +46,21 @@ const listingSchema = new mongoose.Schema({
 
 })
 //middleware
-listingSchema.post("findOneAndDelete", async(listing)=>{
-  if(listing){
- await Review.deleteMany({_id : { $in: listing.reviews}}) //is line  ne 2.5 din le liye fix krne me 
-  }
+// listingSchema.post("findOneAndDelete", async(listing)=>{
+//   if(listing){
+//  await Review.deleteMany({_id : { $in: listing.reviews}}) //is line  ne 2.5 din le liye fix krne me 
+//   }
  
-})
+///})
+// listingSchema.post("findOneAndDelete", async (listing) => {
+//   if (listing && Array.isArray(listing.reviews) && listing.reviews.length > 0) {
+//     try {
+//       await Review.deleteMany({ _id: { $in: listing.reviews } });
+//     } catch (error) {
+//       console.error("Error deleting reviews:", error);
+//     }
+//   }
+// });
+
 const Listing = mongoose.model('Listing',listingSchema);
 module.exports =Listing;

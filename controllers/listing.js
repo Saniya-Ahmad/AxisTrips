@@ -59,6 +59,46 @@ module.exports.editListing=async (req,res)=>{
 
     res.render('listings/edit.ejs',{listing,originalImageUrl});
 }
+
+module.exports.searchListings=async (req, res) => {
+  const { country } = req.query;
+
+  if (!country) {
+    return res.send('Country parameter is required');
+  }
+
+  try {
+    const listings = await Listing.find({ country });
+
+    if (listings.length === 0) {
+      return res.send('No listings found for this country');
+    }
+
+    res.render('listings/searchCountry.ejs', { listings });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error');
+  }}
+  module.exports.showsearchListings= async (req, res) => {
+  const { country } = req.params;
+
+  if (!country) {
+    return res.status(400).send('Country parameter is required');
+  }
+
+  try {
+    const listings = await Listing.find({ country });
+
+    if (listings.length === 0) {
+      return res.status(404).send('No listings found for this country');
+    }
+
+    res.render('listings/searchCountry.ejs', { listings });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error');
+  }
+}
 module.exports.updateListing=async(req,res)=>{
 let{id}= req.params;
 let listing = await Listing.findByIdAndUpdate(id,{ ...req.body.listing });

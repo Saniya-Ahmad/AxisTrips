@@ -47,7 +47,12 @@ router
 //index route
 //router.get('/',wrapAsync(listingController.index));
 //new route should be above the show route otherwise error 
-router.get('/new',isLoggedIn,(listingController.renderNewForm));0
+router.get('/new',isLoggedIn,(listingController.renderNewForm));
+router.get('/country',(listingController.searchListings));
+
+router.get('/listings/country/:country',(listingController.showsearchListings))
+
+
 //show route
 router.get('/:id',isLoggedIn, wrapAsync(listingController.showListing));
 //create route

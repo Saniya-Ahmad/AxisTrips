@@ -8,7 +8,7 @@ const express = require("express");
 const app= express();
 const mongoose = require("mongoose");
 const Listing= require('./models/listing.js');
-// const MONGO_URL= "mongodb://127.0.0.1:27017/axistrips";
+ //const MONGO_URL= "mongodb://127.0.0.1:27017/axistrips";
 const dbUrl= process.env.ATLASDB_URL;
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
@@ -43,6 +43,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 async function main(){
     await mongoose.connect(dbUrl);
+     
 }
 
 const store=MongoStore.create({
@@ -95,6 +96,7 @@ app.use((req,res,next)=>{
 
 
 
+
 //express Router
 app.use('/listings', listings)
 app.use('/listings/:id/reviews', reviews)
@@ -104,7 +106,10 @@ app.use('/', userRouter);
 //     res.send("root directory");
 // })
 
+////////////////////////////////
 
+
+///////////////////////////////////////
 app.listen(8080,()=>{
 console.log("server is listening to port 8080");
 })

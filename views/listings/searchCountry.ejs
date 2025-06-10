@@ -1,0 +1,21 @@
+<% layout('/layouts/boilerplate') %>
+
+<% listings.forEach(listing => { %>
+  <div class="card col-6 show-card listing-card">
+          
+    <h3>Showing results for :<%= listing.country %></h3>
+    <h4><%= listing.title %></h4>
+    <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image"/>
+    <div class="card-body">
+      <p class="card-text">
+        <ul>
+          <li><%= listing.desc %></li>
+          <li>₹ <%= listing.price ? listing.price.toLocaleString("en-IN") : 'Price not available' %> / night</li>
+          <li><%= listing.location %></li>
+          <li><%= listing.country %></li>
+        </ul>
+      </p>
+    </div>
+  </div>
+<% }); %>
+
