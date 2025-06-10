@@ -1,15 +1,17 @@
 <h1>AxisTrips</h1>
+
 <h2>Main Landing Page</h2>
 <img src="gitimageaxistrips.png" >
 <h2>Description</h2>
 <h3>Tools and Technologies used :</h3>
 <p>Node js,Express js, MongoDB, MongoDB Atlas, Cloudinary,Bootstraps</p>
-<img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt="Node.js Logo" width="200">
 
-<h3>More...</h3>
+<a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
+
+<h2>More...</h2>
 <p><b>MVC Framework</b> :Model(DataBase functionaltiy), Views(Frontend Functionality,Controller(Core Backend Functionality) used for implementing design pattern for Listings.</p>
 <p></p>
-<h3>Libraries and Middlewares used: </h3>
+<h2>Libraries and Middlewares used: </h2>
 <p><b>Express-router :</b> Seggregate related paths and <b>Express-Sessions :</b> create session cookie</p>
 <p><b>cookies parser :</b> for authorization </p>
 <p><b>Mongoose middleware: </b> Pre->before query executes ,post-after query execution </p>
