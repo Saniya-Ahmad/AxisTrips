@@ -1,5 +1,5 @@
 <h1>AxisTrips</h1>
-
+<p>A hotel booking platform offering curated stays in select destinations. Unlike large-scale platforms, AxisTrips focuses on personalized experiences, providing travelers with a handpicked selection of accommodations that combine comfort with local charm.</p>
 <h2>Main Landing Page</h2>
 <img src="gitimageaxistrips.png" >
 <h2>Description</h2>
